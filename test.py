@@ -19,13 +19,14 @@ class MoudleTest(unittest.TestCase):
     def test_div(self):
         result=self.cal.div()
         self.assertEqual(result,2)
-
+    
 if __name__=='__main__':
     #unittest.main()
     suite=unittest.TestSuite()
     suite.addTest(MoudleTest("test_add"))
     suite.addTest(MoudleTest("test_sub"))
     suite.addTest(MoudleTest("test_mul"))
+    suite.addTest(MoudleTest("test_div"))
     suite.addTest(MoudleTest("test_div"))
     with open('a.text','w') as report_file:
         runner=unittest.TextTestRunner(stream=report_file, verbosity=2)
